@@ -1,5 +1,5 @@
 #!/bin/bash
-#Backup Profile - 01/04/2018
+#Backup Profile - 10/08/2019
 #Copies .bash_profile, bash scripts, PICO-8 carts, Brew Caskfile, and Brewfile to GitHub directory
 
 #.bash_profile copy
