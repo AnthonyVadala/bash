@@ -7,10 +7,14 @@ echo "Copying .bash_profile..."
 cp ~/.bash_profile ~/Github/Terminal_Settings/Terminal/
 echo "Complete"
 
+#.zshrc copy
+echo "Copying .zshrc..."
+cp ~/.zshrc ~/Github/Terminal_Settings/Terminal/
+echo "Complete"
+
 #Bash scripts copy
 echo "Copying bash scripts.."
 cp -R ~/Documents/scripts ~/Github/bash
-
 echo "Complete"
 
 #PICO-8 carts copy

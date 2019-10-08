@@ -81,6 +81,18 @@ else
 	echo -e "${RED}Download and install .bash_profile skipped${NC}\n"
 fi
 
+#.zshrc download
+echo "Download and install .zshrc (Y/N):"
+read answer
+if [[ $answer == 'Y' || $answer == 'y' ]]
+then
+	echo "Downloading and installing .zshrc..."
+	cd ~ && { curl -O https://raw.githubusercontent.com/AnthonyVadala/Terminal_Settings/master/Terminal/.zshrc ; cd -; }
+	echo -e "${GREEN}Complete...${NC}\n"
+else
+	echo -e "${RED}Download and install .zshrc skipped${NC}\n"
+fi
+
 #Brewfile download and install
 echo "Download and install Brewfile (Y/N):"
 read answer
