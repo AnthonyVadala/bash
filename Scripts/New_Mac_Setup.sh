@@ -1,5 +1,5 @@
 #!/bin/bash
-#New Mac Setup - 01/31/2018
+#New Mac Setup - 10/08/2019
 #Automates the setup of a new Mac using my personal settings and programs
 
 #Adds color to output
@@ -91,6 +91,18 @@ then
 	echo -e "${GREEN}Complete...${NC}\n"
 else
 	echo -e "${RED}Download and install .zshrc skipped${NC}\n"
+fi
+
+#Oh My Zsh Download
+echo "Download and install Oh My Zsh (Y/N):"
+read answer
+if [[ $answer == 'Y' || $answer == 'y' ]]
+then
+	echo "Downloading and installing Oh My Zsh..."
+	cd ~ && { curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh ; cd -; }
+	echo -e "${GREEN}Complete...${NC}\n"
+else
+	echo -e "${RED}Download and install Oh My Zsh skipped${NC}\n"
 fi
 
 #Brewfile download and install
