@@ -11,7 +11,7 @@ brew upgrade
 
 #Checks for lastest versions of Cask installs
 echo "Checking for Homebrew Cask updates..."
-brew cask upgrade
+brew upgrade --cask
 
 #Checks formulae for dependancies
 echo "Checking for missing dependancies..."

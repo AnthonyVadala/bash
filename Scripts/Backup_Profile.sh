@@ -35,7 +35,7 @@ echo "Complete"
 #Homebrew Caskfile
 echo "Creating Brew Caskfile..."
 cd ~/GitHub/Terminal_Settings/Terminal
-brew cask list > preCaskfile
+brew list --cask > preCaskfile
 awk '$0=""$0' preCaskfile > Caskfile
 echo "Cleaning up..."
 rm preCaskfile
