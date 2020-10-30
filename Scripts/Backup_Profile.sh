@@ -25,7 +25,7 @@ echo "Complete"
 #Homebrew Brewfile
 echo "Creating Brewfile..."
 cd ~/GitHub/Terminal_Settings/Terminal
-brew list > preBrewfile
+brew list --formula > preBrewfile
 awk '$0=""$0' preBrewfile > Brewfile
 echo "Cleaning up..."
 rm preBrewfile
