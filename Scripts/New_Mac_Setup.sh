@@ -1,5 +1,5 @@
 #!/bin/bash
-#New Mac Setup - 10/05/2021
+#New Mac Setup - 11/02/2021
 #Automates the setup of a new Mac using my personal settings and programs
 
 #Adds color to output
@@ -14,7 +14,7 @@ read answer
 if [[ $answer == 'Y' || $answer == 'y' ]]
 then
 	echo "Installing Homebrew..."
-	sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	echo -e "${GREEN}Complete...${NC}\n"
 else
 	echo -e "${RED}Homebrew install skipped${NC}\n"
@@ -26,7 +26,7 @@ read answer
 if [[ $answer == 'Y' || $answer == 'y' ]]
 then
 	echo "Installing Jekyll..."
-	sudo gem install bundler jekyll
+	gem install --user-install bundler jekyll
 	echo -e "${GREEN}Complete...${NC}\n"
 else
 	echo -e "${RED}Jekyll install skipped${NC}\n"
@@ -38,7 +38,7 @@ read answer
 if [[ $answer == 'Y' || $answer == 'y' ]]
 then
 	echo "Installing Oh My Zsh..."
-	cd ~ && { curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh ; cd -; }
+	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	echo -e "${GREEN}Complete...${NC}\n"
 else
 	echo -e "${RED}Oh My Zsh install skipped${NC}\n"
@@ -50,7 +50,7 @@ read answer
 if [[ $answer == 'Y' || $answer == 'y' ]]
 then
 	echo "Installing Terminal Xcode..."
-	sudo xcode-select --install
+	xcode-select --install
 	echo -e "${GREEN}Complete...${NC}\n"
 else
 	echo -e "${RED}Terminal Xcode install skipped${NC}\n"
