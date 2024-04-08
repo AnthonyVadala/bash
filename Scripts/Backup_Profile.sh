@@ -45,7 +45,8 @@ echo "Complete"
 
 #Dotfiles
 echo "Copying dotfiles..."
-cp -R ~/.config ~/Documents/Dotfiles
+cp -R ~/.config/neofetch ~/Documents/Dotfiles
+cp -R ~/.config/XIVLauncher ~/Documents/Dotfiles
 cp -R ~/.gem ~/Documents/Dotfiles
 cp -R ~/.gitconfig ~/Documents/Dotfiles
 cp -R ~/.ssh ~/Documents/Dotfiles
