@@ -1,7 +1,7 @@
 #!/bin/bash
 #Backup Profile - 11/03/2021
 #Copies .bash_profile, bash scripts, PICO-8 carts, Brew Caskfile, and Brewfile to GitHub directory
-#Copies dotfiles to iCloud
+#Copies SSH dotfiles to iCloud
 
 #.bash_profile copy
 #echo "Copying .bash_profile..."
@@ -15,12 +15,12 @@ echo "Complete"
 
 #Bash scripts copy
 echo "Copying bash scripts.."
-cp -R ~/Documents/scripts ~/Github/bash
+cp -R ~/Documents/scripts ~/GitHub/bash
 echo "Complete"
 
 #PICO-8 carts copy
 #echo "Copying PICO-8 carts.."
-#cp -R ~/Library/Application\ Support/pico-8/carts/games ~/Github/PICO-8
+#cp -R ~/Library/Application\ Support/pico-8/carts/games ~/GitHub/PICO-8
 #echo "Complete"
 
 #Homebrew Brewfile
@@ -43,11 +43,7 @@ rm preCaskfile
 cd ~
 echo "Complete"
 
-#Dotfiles
-echo "Copying dotfiles..."
-cp -R ~/.config/XIVLauncher ~/Documents/Dotfiles
-cp -R ~/.gem ~/Documents/Dotfiles
-cp -R ~/.gitconfig ~/Documents/Dotfiles
+#SSH Dotfiles
+echo "Copying SSH Files ..."
 cp -R ~/.ssh ~/Documents/Dotfiles
-cp -R ~/.zshrc ~/Documents/Dotfiles
 echo "Complete"
